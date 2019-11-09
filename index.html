@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link rel="stylesheet" href="assets/CSS/hover.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/CSS/main.css" type="text/css" />
+
+
+    <title>Client Name</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md">
+        <a class="navbar-brand" href="#" onclick="reload()"><img src="assets/images/company-logo.png" alt="navIcon">Client Name</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="fa fa-bars"></span>
+  </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick='show_products();' id="load_data">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick='show_sales();'>Sales Details</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    </header>
+    <div class="container">
+        
+        <div class="row home_img">
+            <div class="col">
+                
+                <img src="assets/images/checklist_customer.jpg" alt="a_product_img"></img>
+            </div>
+        </div>
+        <div class="row home_para">
+            <div class="col">
+                <h3 align="left" class="table_headding">Client Name</h3>
+                <p align="center">This Paragraph contains come details about the Client, their Products, Services etc.<br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, quidem voluptatum ab. Explicabo sit quidem adipisci perspiciatis error quaerat voluptas ea inventore consequuntur reprehenderit! Ab maiores asperiores, magni consequuntur quasi facilis dignissimos laudantium rem cumque nemo cupiditate id aliquam aliquid porro debitis voluptatum facere perspiciatis non quae quaerat veniam. Doloremque.</p>
+            </div>
+        </div>
+        
+        <div class=" row table-responsive" id="product_details" style="display: none">
+            <div class="col-sm">
+                <h3 align="center" class="table_headding">Product Details</h3>
+                <br />
+                <div align="center">
+                    <!--<button type="button" name="load_data" id="load_data" class="btn btn-info">Load Data</button>-->
+                </div>
+                <br />
+                <div id="prod_table">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row" id="sales_details" style="display: none">
+            <div class="col-sm">
+                <h3 align="center" class="table_headding">Sales Details</h3><br /><br />
+
+                <form align="center">
+                    <select id="product_code" onchange="selected_product(this.value)">
+                         <option value="">Product Code</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+</select>
+
+                    <input type="text" id="description" placeholder="Description" readonly>
+                    <input type="number" id="quantity" onfocus="this.value=''" placeholder="Quantity">
+                    <input type="number" step="0.01" id="total_cost_price" onfocus="this.value=''" placeholder="Total Cost Price">
+                    <input type="number" step="0.01" id="total_sell_price" onfocus="this.value=''" placeholder="Total Sell Price">
+                    <input type="button" class="add-row hvr-pop" value="Add Row">
+                </form><br />
+
+                <table id="sales_table" class="table">
+                    <thead>
+                        <tr>
+                            <th>Product Code</th>
+                            <th>Description</th>
+                            <th>Quantity</th>
+                            <th>Total Cost Price</th>
+                            <th>Total Sell Price</th>
+                            <th><button class='btn hvr-pop'><i class="fas fa-trash-alt"></i></button></th>
+                        </tr>
+                    </thead>
+
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+    <script type="text/javascript" src="">
+    </script>
+
+</body>
+
+</html>

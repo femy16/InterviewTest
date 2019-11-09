@@ -1,0 +1,159 @@
+.navbar {
+    background: linear-gradient(to right, white 2%, #b9d342);
+    /*position: fixed;*/
+    /*z-index: 2;*/
+    max-width: 100%;
+
+}
+.navbar-brand {
+   font-family: 'Varela Round', sans-serif;
+    font-size: 45px;
+    color: #444a50;
+    padding-left: 10px;
+}
+.navbar-brand:hover{
+    color:#b2cf30 ;
+}
+.nav-link {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 20px;
+    float: right;
+    color: #444a50;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.nav-link:hover{
+    color:white; 
+}
+.navbar-nav{
+    float: right;
+     padding-left: 300px;
+    padding-right: 20px;
+}
+.nav-item {
+    /*display: inline-block;*/
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.home_para,.home_img{
+    padding-top: 50px;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 20px;
+}
+.home_img img{
+    max-width: 100%;
+}
+
+.table_headding{
+    color: #b2cf30;
+}
+#sales_details,#product_details{
+   font-family: 'Varela Round', sans-serif;
+    padding-top: 50px;
+}
+#sales_table{
+     padding-top: 30px;
+}
+
+ tr:nth-child(even){background-color: #f2f2f2;}
+
+ tr:hover {background-color: #ddd;}
+ td{
+     border-color: #b9d342;
+     border-style: solid;
+ }
+
+ th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #b9d342;
+  color: white;
+}
+.prod_table,.sales_table{
+    border-color: #b9d342;
+     border-style: solid;
+}
+.add-row{
+    background-color: #b9d342;
+}
+@media only screen and (max-width: 1024px) {
+
+#sales_details,#product_details{
+        padding-top: 100px;
+}
+    .nav-item {
+        display: inline-block;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .navbar-brand {
+
+        padding-left: 15px;
+    }
+    .navbar-nav{
+    float: right;
+     padding-left: 150px;
+    padding-right: 20px;
+}
+
+}
+@media only screen and (max-width: 768px) {
+
+    .nav-item {
+        display: inline-block;
+        padding: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .navbar-brand {
+        font-size: 38px;
+    }
+    .table_headding{
+        font-size: 30px;
+    }
+    .navbar-brand img {
+        max-width: 40%;
+
+    }
+    .navbar-brand {
+
+        padding-left: 5px;
+    }
+}
+@media only screen and (max-width: 479px) {
+    .navbar-brand {
+        font-size: 30px;
+    }
+    .table_headding{
+        font-size: 25px;
+    }
+    .navbar-brand img {
+        max-width: 23%;
+        /*display: none;*/
+    }
+
+    .navbar-brand {
+        padding-left: 5px;
+    }
+     .navbar-nav{
+    float: right;
+     padding-left: 40px;
+    padding-right: 20px;
+}
+
+.prod_table,.sales_table{
+    width: 350px;
+}
+.table td, .table th {
+     padding: .1rem; 
+}
+#sales_details,#product_details{
+        padding-top: 30px;
+}
+
+}
